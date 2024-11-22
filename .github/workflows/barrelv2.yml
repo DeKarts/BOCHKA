@@ -20,8 +20,8 @@ jobs:
            password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build docker image
-        run: docker build -t ghcr.io/DeKarts/BOCHKA/node-image:latest ./node/
+        run: docker build -t ghcr.io/dekarts/bochka/node-image:latest ./node/
 
       - name: Push docker image
-        run: docker push ghcr.io/DeKarts/BOCHKA/node-image:latest
+        run: docker push ghcr.io/dekarts/bochka/node-image:latest
         
