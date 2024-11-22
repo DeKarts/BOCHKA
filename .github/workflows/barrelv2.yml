@@ -16,8 +16,8 @@ jobs:
         uses: docker/login-action@v3
         with:
            registry: ghcr.io
-           username: ${( github.actor)}
-           password: ${(secrets.QITHUB_TOKEN)}
+           username: ${{ github.actor }}
+           password: ${{ secrets.QITHUB_TOKEN }}
 
       - name: Build docker image
         run: docker build -t ghcr.io/DeKarts/BOCHKA/node-image:latest ./node/
