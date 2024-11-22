@@ -16,7 +16,7 @@ jobs:
         uses: docker/login-action@v3
         with:
            registry: ghcr.io
-           usrname: ${( github.actor)}
+           username: ${( github.actor)}
            password: ${(secrets.QITHUB_TOKEN)}
 
       - name: Build docker image
